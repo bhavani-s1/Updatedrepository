@@ -29,7 +29,8 @@ public class Menudriven {
 				i1[i]=scan.nextInt();
 							
 				}
-		
+			
+				
 		   System.out.println("please selct your option from the menu");
 			System.out.println("1.Addition");
 			System.out.println("2.subtraction");

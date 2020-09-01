@@ -18,11 +18,13 @@ public class ExampleExpression {
 	        // The tokens that make up the input
 	        String[] s1 = input.split(""); //splits the expression
 	        
+	        System.out.println(s1.length);
 	      for(int i=0;i<s1.length;i++) {
 	        	
 	        	System.out.println(s1[i]); 
-	        }
+	        
 	        System.out.println(s1[1]);
+	      }
 	        //System.out.println(s1[1].charAt(0));
 	
 	
