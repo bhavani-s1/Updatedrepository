@@ -8,17 +8,25 @@ package com.sample2;
 			
 			for(int i=1;i<num;i++)
 			{
+				//try {
 
-				if(i1[i]==0)
-					
+				if(i1[i]==0) {
+				
+					d= d/i1[i];
 					throw new MyownException("Division by 0 is not possible");
 			
-				d= d/i1[i];
+				
+				}
 			
+		//	catch(MyownException e) {
+				//System.out.println(e);
+			//}
+				
 			}
 			System.out.println(d);
 
 			}
-			}
+	}
+			
 
 
