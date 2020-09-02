@@ -20,7 +20,7 @@ public class Calculator {
 			System.out.println("Press 3 for Multiplication");
 			System.out.println("Press 4 for Division");
 			System.out.println("Press 5 for Exit ");
-			//System.out.println("================================");
+		
 			Scanner input = new Scanner(System.in);
 			choice = input.nextInt();
 			

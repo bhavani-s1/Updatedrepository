@@ -75,18 +75,18 @@ public class Menudriven {
 				break;
 				
 				//case 5: System.out.println("enter expression");
-				
-				
-				//break;
+				 
 				default: System.out.println("Incorrect input!!! Please re-enter choice from our menu");
 				
 				}
 				System.out.println("do you want to continue?1.yes 2.No");
-			 c1=scan.nextInt();
-				if(c1==2){
+			 
+				c1=scan.nextInt();
+				
+			 if(c1==2){
 					System.out.println("exit");
 		}
-					}while(result!=9&&c1!=2);
+					}while(result!=5&&c1!=2);
 			}
 }
 				

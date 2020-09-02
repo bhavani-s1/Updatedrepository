@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class ExampleExpression {
 
-	public static void main(String[] args) {
+public static void main(String[] args) {
 	
 		 Scanner scan = new Scanner(System.in);
 
@@ -12,16 +12,16 @@ public class ExampleExpression {
 	       int result = 0;
 
 	        // The original input
+	       
+	       
 	        System.out.print("Enter an expression to compute: ");
 	        String input = scan.nextLine();
-
-	        // The tokens that make up the input
-	        String[] s1 = input.split(""); //splits the expression
+             String[] s1 = input.split(""); //splits the expression
 	        
-	        System.out.println(s1.length);
+	        //System.out.println(s1.length);
 	      for(int i=0;i<s1.length;i++) {
 	        	
-	        	System.out.println(s1[i]); 
+	        	//System.out.println(s1[i]); 
 	        
 	        System.out.println(s1[1]);
 	      }
