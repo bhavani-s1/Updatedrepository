@@ -10,14 +10,28 @@ public class Menudriven {
 			int su=0;
 			int m=1;
 			static int d;
+			static int c1 = 0;
 			private static Scanner scan;
+			static int choice;
 			
 			public static void main(String[] args) throws MyownException {
-				int c1 = 0;
+				
 				
 				scan = new Scanner(System.in);
 	
 		do {
+			  System.out.println("please selct your option from the menu");
+				System.out.println("1.Addition");
+				System.out.println("2.subtraction");
+				System.out.println("3.division");
+				System.out.println("4.multiplication");
+				System.out.println("5.Expression evaluation");
+				System.out.println("6.Exit");
+					
+				System.out.println("Enter choice::");
+					
+				 choice = scan.nextInt();
+				
 				System.out.println("Enter the number of inputs for the operations:");
 				num=scan.nextInt();
 				 int i1[]= new int[num];
@@ -29,17 +43,6 @@ public class Menudriven {
 				i1[i]=scan.nextInt();
 							
 				}
-				
-		   System.out.println("please selct your option from the menu");
-			System.out.println("1.Addition");
-			System.out.println("2.subtraction");
-			System.out.println("3.division");
-			System.out.println("4.multiplication");
-			System.out.println("5.Expression evaluation");
-				
-			System.out.println("Enter choice::");
-				
-			int choice = scan.nextInt();
 				
 				switch(choice) {
 						
@@ -73,20 +76,28 @@ public class Menudriven {
 				
 				break;
 				
-				//case 5: System.out.println("enter expression");
-				 
+				case 5: 
+			
+				NewExpression m1 = new NewExpression();
+
+			    m1.eval();
+			    
+			    break;
+			    
+				case 6:System.out.println("You have pressed 6. The program has ended..!!");
+				break;
+				
 				default: System.out.println("Incorrect input!!! Please re-enter choice from our menu");
 				
 				}
-				System.out.println("do you want to continue?1.yes 2.No");
-			 
-				c1=scan.nextInt();
 				
-			 if(c1==2){
-					System.out.println("exit");
-		}
-					}while(result!=5&&c1!=2);
-			}
+			System.out.println("do you want to continue?1.yes 2.No");			 
+			  c1=scan.nextInt();
+		 if(c1==2){
+				System.out.println("exit");
+	}
+				}while(choice!=6&&c1!=2);
+}
 }
 				
 

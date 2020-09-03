@@ -4,15 +4,15 @@ import java.util.Scanner;
 
     
 
-public class NewExpression {
+public class NewExpression extends Menudriven {
 	
-		public static void main(String[] args) {
+		//public static void main(String[] args) {
 
-			NewExpression m = new NewExpression();
+		//	NewExpression m = new NewExpression();
 
-		    m.eval();
+		 //   m.eval();
 
-		    }
+		 //   }
 
 		public void eval()
 		{
