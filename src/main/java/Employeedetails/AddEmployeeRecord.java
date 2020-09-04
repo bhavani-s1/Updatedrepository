@@ -22,7 +22,10 @@ public class AddEmployeeRecord extends Employee {
 		System.out.print("Enter the Designation: ");
 
 		list.add(input.next());
-
+		
+		System.out.print("Enter the salary: ");
+		
+		list.add(input.next());
 		map.put(id, list);
 
 		System.out.println("\nRecord has been Added...!");

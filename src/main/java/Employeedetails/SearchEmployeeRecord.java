@@ -8,7 +8,7 @@ void searchRecord() {
 		id = input.next();
 		if (map.containsKey(id))
 		{
-			System.out.println("ID | NAME | DEPARMENT | DESIGNATION");
+			System.out.println("ID: NAME: DEPARMENT: DESIGNATION");
 			
 
 			System.out.print(id + map.get(id) + "\n\n");
