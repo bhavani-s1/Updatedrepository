@@ -28,6 +28,7 @@ public class Employee {
 			switch (choice) {
 			case 1:
 				AddEmployeeRecord add = new AddEmployeeRecord();
+				
 				add.addRecord();
 				
 				break;
