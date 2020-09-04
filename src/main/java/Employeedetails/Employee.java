@@ -29,6 +29,7 @@ public class Employee {
 			case 1:
 				AddEmployeeRecord add = new AddEmployeeRecord();
 				add.addRecord();
+				
 				break;
 			case 2:
 				SearchEmployeeRecord search = new SearchEmployeeRecord();
