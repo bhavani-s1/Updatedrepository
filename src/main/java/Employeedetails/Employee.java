@@ -26,7 +26,7 @@ public class Employee {
 			System.out.println("Press 5 to Exit");
 			choice = input.nextInt();
 			
-			EmployePojo  cl = new  EmployePojo();
+			//EmployePojo  cl = new  EmployePojo();
 			switch (choice) {
 			case 1:
 				AddEmployeeRecord add = new AddEmployeeRecord();

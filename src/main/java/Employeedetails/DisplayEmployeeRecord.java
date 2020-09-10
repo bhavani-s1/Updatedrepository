@@ -5,7 +5,6 @@ import java.util.Map.Entry;
 
 public class DisplayEmployeeRecord extends Employee {
 
-	
 	void displayRecord()
 
 	{
@@ -17,9 +16,6 @@ public class DisplayEmployeeRecord extends Employee {
 		
 	}
 
-	
-		
-		
 
 	
 	}
