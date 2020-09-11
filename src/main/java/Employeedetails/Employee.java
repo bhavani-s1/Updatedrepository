@@ -7,10 +7,11 @@ import java.util.Scanner;
 
 public class Employee {
 	
-	static String id;
+	static int id;
 	static String name;
 	static String department;
 	static String designation;
+	static int sal;
 	static Map<Object, List<String>> map;
 	static Scanner input = new Scanner(System.in);
 	
@@ -23,7 +24,8 @@ public class Employee {
 			System.out.println("Press 2 to Search Record");
 			System.out.println("Press 3 to Delete Record");
 			System.out.println("Press 4 to Display All record");
-			System.out.println("Press 5 to Exit");
+			System.out.println("press 5 to modify record");
+			System.out.println("Press 6 to Exit");
 			choice = input.nextInt();
 			
 			//EmployePojo  cl = new  EmployePojo();
@@ -46,13 +48,17 @@ public class Employee {
 				DisplayEmployeeRecord display = new DisplayEmployeeRecord();
 				display.displayRecord();
 				break;
-			case 5:
-				System.out.println("You have pressed 5..The program has been ended...!!!");
+			case 5:System.out.println("Enter the Id you want to Modify:");
+			id = input.nextInt();
+		//	ModifyEmp m1= new ModifyEmp();
+			//m1.modifyEmp(id);
+			case 6:
+				System.out.println("You have pressed 6..The program has been ended...!!!");
 				break;
 			default:
 				System.out.println("Wrong Choice...!!");	
 			}
-		} while (choice != 5);
+		} while (choice != 6);
 		
 	}
 }
