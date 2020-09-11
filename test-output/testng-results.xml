@@ -2,28 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="20766" started-at="2020-09-11T12:13:39 IST" finished-at="2020-09-11T12:14:00 IST">
+  <suite name="Default suite" duration-ms="7692" started-at="2020-09-11T20:18:49 IST" finished-at="2020-09-11T20:18:57 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="20766" started-at="2020-09-11T12:13:39 IST" finished-at="2020-09-11T12:14:00 IST">
-      <class name="TestngBasics1.GoogleTest">
-        <test-method status="PASS" signature="launchbrowser()[pri:0, instance:TestngBasics1.GoogleTest@cd2dae5]" name="launchbrowser" is-config="true" duration-ms="12" started-at="2020-09-11T12:13:39 IST" finished-at="2020-09-11T12:13:39 IST">
+    <test name="Default test" duration-ms="7692" started-at="2020-09-11T20:18:49 IST" finished-at="2020-09-11T20:18:57 IST">
+      <class name="TestngBasics1.Shopping">
+        <test-method status="PASS" signature="SetDriver()[pri:0, instance:TestngBasics1.Shopping@49fc609f]" name="SetDriver" is-config="true" duration-ms="13" started-at="2020-09-11T20:18:49 IST" finished-at="2020-09-11T20:18:49 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- launchbrowser -->
-        <test-method status="PASS" signature="login()[pri:0, instance:TestngBasics1.GoogleTest@cd2dae5]" name="login" is-config="true" duration-ms="10764" started-at="2020-09-11T12:13:39 IST" finished-at="2020-09-11T12:13:50 IST">
+        </test-method> <!-- SetDriver -->
+        <test-method status="PASS" signature="verifyTitle()[pri:0, instance:TestngBasics1.Shopping@49fc609f]" name="verifyTitle" duration-ms="7053" started-at="2020-09-11T20:18:49 IST" finished-at="2020-09-11T20:18:56 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- login -->
-        <test-method status="PASS" signature="homepageTest()[pri:0, instance:TestngBasics1.GoogleTest@cd2dae5]" name="homepageTest" duration-ms="7763" started-at="2020-09-11T12:13:50 IST" finished-at="2020-09-11T12:13:58 IST">
+        </test-method> <!-- verifyTitle -->
+        <test-method status="PASS" signature="closedriver()[pri:0, instance:TestngBasics1.Shopping@49fc609f]" name="closedriver" is-config="true" duration-ms="570" started-at="2020-09-11T20:18:56 IST" finished-at="2020-09-11T20:18:57 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- homepageTest -->
-        <test-method status="PASS" signature="closebrowser()[pri:0, instance:TestngBasics1.GoogleTest@cd2dae5]" name="closebrowser" is-config="true" duration-ms="2179" started-at="2020-09-11T12:13:58 IST" finished-at="2020-09-11T12:14:00 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closebrowser -->
-      </class> <!-- TestngBasics1.GoogleTest -->
+        </test-method> <!-- closedriver -->
+      </class> <!-- TestngBasics1.Shopping -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -3,14 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestngBasics1.GoogleTest">
+      <class name="TestngBasics1.Shopping">
         <methods>
-          <include name="login"/>
-          <include name="launchbrowser"/>
-          <include name="closebrowser"/>
-          <include name="homepageTest"/>
+          <include name="closedriver"/>
+          <include name="verifyTitle"/>
+          <include name="SetDriver"/>
         </methods>
-      </class> <!-- TestngBasics1.GoogleTest -->
+      </class> <!-- TestngBasics1.Shopping -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
