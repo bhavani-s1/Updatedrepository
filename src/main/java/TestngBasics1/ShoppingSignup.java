@@ -3,11 +3,13 @@ package TestngBasics1;
 import java.util.concurrent.TimeUnit;
 
 //import org.openqa.selenium.Alert;
+//import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.Test;
 
 public class ShoppingSignup {
 
@@ -16,6 +18,7 @@ public class ShoppingSignup {
 	//String itemName;
 	
 	
+	@Test(priority=1)
 	
 		public void launchBrowser() {
 			
@@ -25,6 +28,8 @@ System.setProperty("webdriver.chrome.driver","C:\\Users\\bhavani.kore\\Drivers\\
 		 driver= new ChromeDriver();
 		
 		driver.get("https://www.demoblaze.com/");
+		
+		driver.manage().window().maximize();
 	}
 	/*	//signup
 		
@@ -44,12 +49,15 @@ System.setProperty("webdriver.chrome.driver","C:\\Users\\bhavani.kore\\Drivers\\
 */
 		//login
 		
+	@Test(priority=2)
 		public void login() {
 			
 		
 			
 		driver.findElement(By.xpath("//a[@id='login2']")).click();
+		
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		
 		driver.findElement(By.id("loginusername")).sendKeys("k.bhavani6@gmail.com");
 		
 		driver.findElement(By.id("loginpassword")).sendKeys("India@123");
@@ -58,14 +66,18 @@ System.setProperty("webdriver.chrome.driver","C:\\Users\\bhavani.kore\\Drivers\\
 		
 		
 	}
+		@Test(priority=4)
 		
 		public void addToCart() {
 			
 	//String itemName=driver.findElement(By.linkText("Samsung galaxy s6")).getText();
 			
-			driver.navigate().refresh();
+	driver.navigate().refresh();
+	
 	driver.findElement(By.xpath("//a[contains(text(),'Nokia lumia 1520')]")).click();
+	
 	driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	
 	driver.findElement(By.xpath("//a[contains(text(),'Add to cart')]")).click();
 	
 	/*Alert alert1=driver.switchTo().alert();
@@ -82,16 +94,72 @@ System.setProperty("webdriver.chrome.driver","C:\\Users\\bhavani.kore\\Drivers\\
 	
 			
 		}
-
+@Test(priority=5)
+		public void placeOrder() {
+			
+	//WebDriverWait wait = new WebDriverWait(driver, 5);
+	//wait.until(ExpectedConditions.visibilityOf(element));
+			
+			driver.findElement(By.cssSelector("body:nth-child(2) div:nth-child(7) div.row div.col-lg-1 > button.btn.btn-success:nth-child(3)")).click();
+			
+			driver.findElement(By.id("name")).sendKeys("Bhavani");
+			
+			driver.findElement(By.id("country")).sendKeys("India");
+			
+			driver.findElement(By.id("city")).sendKeys("Bangalore");
+			
+			driver.findElement(By.id("card")).sendKeys("45362527288196");
+			
+			driver.findElement(By.id("month")).sendKeys("October");
+			
+			driver.findElement(By.id("year")).sendKeys("2026");
+			
+			driver.findElement(By.xpath("//button[contains(text(),'Purchase')]")).click();
+			
+          //Alert alert1=driver.switchTo().alert();
+			
+			//String alertmsg1=driver.switchTo().alert().getText();
+			
+			//System.out.println(alertmsg1);
+			
+			
+			
+		}
      
-        public static void main(String[] args) {
-
-        ShoppingSignup s1= new ShoppingSignup();
-        s1.launchBrowser();
-        s1.login();
-        s1.addToCart();
-    
-        }
+@Test(priority=3)
+		
+		public void contactUs() {
+			
+	driver.navigate().refresh();
+			driver.findElement(By.xpath("//a[contains(text(),'Contact')]")).click();
+			 
+			 driver.findElement(By.id("recipient-email")).sendKeys("k.bhavani6@gmail.com");
+			 
+			driver.findElement(By.xpath("//input[@id='recipient-name']")).sendKeys("Bhavani");
+			
+			driver.findElement(By.xpath("//textarea[@id='message-text']")).sendKeys("message");
+			
+			driver.findElement(By.xpath("//button[contains(text(),'Send message')]")).click();
+			
+			WebDriverWait wait = new WebDriverWait(driver,2);
+			
+			wait.until(ExpectedConditions.alertIsPresent());
+			
+           String alertmsg=driver.switchTo().alert().getText();
+			
+			System.out.println(alertmsg);
+			
+			driver.switchTo().alert().accept();
+			
+			//Alert alert=driver.switchTo().alert();
+			
+			
+			
+			
+		}
+		
+     
 }
+
         
         
