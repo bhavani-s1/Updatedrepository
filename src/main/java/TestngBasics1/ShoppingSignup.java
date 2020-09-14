@@ -51,7 +51,7 @@ System.setProperty("webdriver.chrome.driver","C:\\Users\\bhavani.kore\\Drivers\\
 		
 	@Test(priority=2)
 		
-	public void login() {
+	public void login() throws InterruptedException {
 			
 			
 		driver.findElement(By.xpath("//a[@id='login2']")).click();
@@ -64,7 +64,7 @@ System.setProperty("webdriver.chrome.driver","C:\\Users\\bhavani.kore\\Drivers\\
 		
 		driver.findElement(By.xpath("//button[contains(text(),'Log in')]")).click();
 		
-		
+		Thread.sleep(2000);
 	}
 		@Test(priority=4)
 		
@@ -72,18 +72,13 @@ System.setProperty("webdriver.chrome.driver","C:\\Users\\bhavani.kore\\Drivers\\
 		
 		{
 			
-	 driver.navigate().refresh();
-	
-	 driver.findElement(By.xpath("//a[contains(text(),'Nokia lumia 1520')]")).click();
-	
-	 driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-	
-	driver.findElement(By.xpath("//a[contains(text(),'Add to cart')]")).click();
-	
-	WebDriverWait wait = new WebDriverWait(driver,2);
-	
-	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[contains(text(),'Cart')]"))).click();
-	
+			driver.navigate().refresh();
+			driver.findElement(By.xpath("//a[contains(text(),'Nokia lumia 1520')]")).click();
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			driver.findElement(By.xpath("//a[contains(text(),'Add to cart')]")).click();
+			WebDriverWait wait = new WebDriverWait(driver,2);
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[contains(text(),'Cart')]"))).click();
+
 	
 			
 		}
@@ -93,36 +88,15 @@ System.setProperty("webdriver.chrome.driver","C:\\Users\\bhavani.kore\\Drivers\\
 		
       public void placeOrder() throws InterruptedException {
 			
-    	  driver.navigate().refresh();
-			driver.findElement(By.cssSelector("body:nth-child(2) div:nth-child(7) div.row div.col-lg-1 > button.btn.btn-success:nth-child(3)")).click();
-			
-			driver.findElement(By.id("name")).sendKeys("Bhavani");
-			
-			driver.findElement(By.id("country")).sendKeys("India");
-			
-			driver.findElement(By.id("city")).sendKeys("Bangalore");
-			
-			driver.findElement(By.id("card")).sendKeys("45362527288196");
-			
-			driver.findElement(By.id("month")).sendKeys("October");
-			
-			driver.findElement(By.id("year")).sendKeys("2026");
-			
-			//driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-			
-			WebDriverWait wait = new WebDriverWait(driver,2);
-			
-			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[contains(text(),'Purchase')]"))).click();
-			
-			Thread.sleep(2000);
-			//driver.findElement(By.xpath("//button[contains(text(),'Purchase')]")).click();
-			
-          //Alert alert1=driver.switchTo().alert();
-			
-		//	String alertmsg1=driver.switchTo().alert().getText();
-			
-		//System.out.println(alertmsg1);
-			
+    	  driver.findElement(By.cssSelector("body:nth-child(2) div:nth-child(7) div.row div.col-lg-1 > button.btn.btn-success:nth-child(3)")).click();
+    	  driver.findElement(By.id("name")).sendKeys("Bhavani");
+    	  driver.findElement(By.id("country")).sendKeys("India");
+    	  driver.findElement(By.id("city")).sendKeys("Bangalore");
+    	  driver.findElement(By.id("card")).sendKeys("45362527288196");
+    	  driver.findElement(By.id("month")).sendKeys("September");
+    	  driver.findElement(By.id("year")).sendKeys("2020");
+    	  driver.findElement(By.xpath("//button[contains(text(),'Purchase')]")).click();
+
 			
 			
 		}
@@ -131,28 +105,18 @@ System.setProperty("webdriver.chrome.driver","C:\\Users\\bhavani.kore\\Drivers\\
 		
 		public void contactUs() {
 			
-	driver.navigate().refresh();
-			
-	driver.findElement(By.xpath("//a[contains(text(),'Contact')]")).click();
-			 
-			 driver.findElement(By.id("recipient-email")).sendKeys("k.bhavani6@gmail.com");
-			 
-			driver.findElement(By.xpath("//input[@id='recipient-name']")).sendKeys("Bhavani");
-			
-			driver.findElement(By.xpath("//textarea[@id='message-text']")).sendKeys("message");
-			
-			driver.findElement(By.xpath("//button[contains(text(),'Send message')]")).click();
-			
-			WebDriverWait wait = new WebDriverWait(driver,2);
-			
-			wait.until(ExpectedConditions.alertIsPresent());
-			
-           String alertmsg=driver.switchTo().alert().getText();
-			
-			System.out.println(alertmsg);
-			
-			driver.switchTo().alert().accept();
-			
+    	driver.navigate().refresh();
+    	driver.findElement(By.xpath("//a[contains(text(),'Contact')]")).click();
+    	driver.findElement(By.id("recipient-email")).sendKeys("k.bhavani6@gmail.com");
+    	driver.findElement(By.xpath("//input[@id='recipient-name']")).sendKeys("Bhavani");
+    	driver.findElement(By.xpath("//textarea[@id='message-text']")).sendKeys("message");
+    	driver.findElement(By.xpath("//button[contains(text(),'Send message')]")).click();
+    	WebDriverWait wait = new WebDriverWait(driver,2);
+    	wait.until(ExpectedConditions.alertIsPresent());
+    	   String alertmsg=driver.switchTo().alert().getText();
+    	System.out.println(alertmsg);
+    	driver.switchTo().alert().accept();
+
 			//Alert alert=driver.switchTo().alert();
 			
     }

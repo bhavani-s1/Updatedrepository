@@ -5,6 +5,7 @@
     <classes>
       <class name="TestngBasics1.ShoppingSignup">
         <methods>
+          <include name="contactUs"/>
           <include name="placeOrder"/>
         </methods>
       </class> <!-- TestngBasics1.ShoppingSignup -->

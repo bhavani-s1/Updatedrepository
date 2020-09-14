@@ -2,32 +2,32 @@
 <testng-results skipped="0" failed="0" ignored="0" total="6" passed="6">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="15512" started-at="2020-09-14T16:23:35 IST" finished-at="2020-09-14T16:23:50 IST">
+  <suite name="Default suite" duration-ms="22326" started-at="2020-09-14T19:04:17 IST" finished-at="2020-09-14T19:04:39 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="15512" started-at="2020-09-14T16:23:35 IST" finished-at="2020-09-14T16:23:50 IST">
+    <test name="Default test" duration-ms="22326" started-at="2020-09-14T19:04:17 IST" finished-at="2020-09-14T19:04:39 IST">
       <class name="TestngBasics1.ShoppingSignup">
-        <test-method status="PASS" signature="launchBrowser()[pri:1, instance:TestngBasics1.ShoppingSignup@578486a3]" name="launchBrowser" duration-ms="6163" started-at="2020-09-14T16:23:35 IST" finished-at="2020-09-14T16:23:41 IST">
+        <test-method status="PASS" signature="launchBrowser()[pri:1, instance:TestngBasics1.ShoppingSignup@578486a3]" name="launchBrowser" duration-ms="9595" started-at="2020-09-14T19:04:17 IST" finished-at="2020-09-14T19:04:27 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method status="PASS" signature="login()[pri:2, instance:TestngBasics1.ShoppingSignup@578486a3]" name="login" duration-ms="664" started-at="2020-09-14T16:23:41 IST" finished-at="2020-09-14T16:23:41 IST">
+        <test-method status="PASS" signature="login()[pri:2, instance:TestngBasics1.ShoppingSignup@578486a3]" name="login" duration-ms="2780" started-at="2020-09-14T19:04:27 IST" finished-at="2020-09-14T19:04:30 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method status="PASS" signature="contactUs()[pri:3, instance:TestngBasics1.ShoppingSignup@578486a3]" name="contactUs" duration-ms="1331" started-at="2020-09-14T16:23:41 IST" finished-at="2020-09-14T16:23:43 IST">
+        <test-method status="PASS" signature="contactUs()[pri:3, instance:TestngBasics1.ShoppingSignup@578486a3]" name="contactUs" duration-ms="1479" started-at="2020-09-14T19:04:30 IST" finished-at="2020-09-14T19:04:31 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- contactUs -->
-        <test-method status="PASS" signature="addToCart()[pri:4, instance:TestngBasics1.ShoppingSignup@578486a3]" name="addToCart" duration-ms="3292" started-at="2020-09-14T16:23:43 IST" finished-at="2020-09-14T16:23:46 IST">
+        <test-method status="PASS" signature="addToCart()[pri:4, instance:TestngBasics1.ShoppingSignup@578486a3]" name="addToCart" duration-ms="5026" started-at="2020-09-14T19:04:31 IST" finished-at="2020-09-14T19:04:36 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addToCart -->
-        <test-method status="PASS" signature="placeOrder()[pri:5, instance:TestngBasics1.ShoppingSignup@578486a3]" name="placeOrder" duration-ms="3410" started-at="2020-09-14T16:23:46 IST" finished-at="2020-09-14T16:23:50 IST">
+        <test-method status="PASS" signature="placeOrder()[pri:5, instance:TestngBasics1.ShoppingSignup@578486a3]" name="placeOrder" duration-ms="1193" started-at="2020-09-14T19:04:36 IST" finished-at="2020-09-14T19:04:37 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- placeOrder -->
-        <test-method status="PASS" signature="closeBrowser()[pri:6, instance:TestngBasics1.ShoppingSignup@578486a3]" name="closeBrowser" duration-ms="572" started-at="2020-09-14T16:23:50 IST" finished-at="2020-09-14T16:23:50 IST">
+        <test-method status="PASS" signature="closeBrowser()[pri:6, instance:TestngBasics1.ShoppingSignup@578486a3]" name="closeBrowser" duration-ms="2165" started-at="2020-09-14T19:04:37 IST" finished-at="2020-09-14T19:04:39 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->

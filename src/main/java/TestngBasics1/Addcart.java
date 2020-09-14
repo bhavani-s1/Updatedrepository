@@ -1,5 +1,6 @@
 package TestngBasics1;
 
+import org.openqa.selenium.Alert;
 //import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -18,17 +19,17 @@ public class Addcart {
 		driver.manage().window().maximize();
 		driver.findElement(By.id("itemc")).click();
         driver.findElement(By.linkText("Sony vaio i5")).click(); //selecting item
-        driver.findElement(By.className("btn btn-success btn-lg")).click();
+        //driver.findElement(By.className("btn btn-success btn-lg")).click();
         
-       // driver.findElement(By.linkText("Add to Cart")).click();
+       driver.findElement(By.linkText("Add to Cart")).click();
         
      //driver.findElement(By.xpath("//a[@class='btn btn-success btn-lg']")).click();
         
-      //  alert = driver.switchTo().alert();
+      Alert alert = driver.switchTo().alert();
         
-       // String alertMessage= driver.switchTo().alert().getText();
+       String alertMessage= alert.getText();
         
-       // System.out.println(alertMessage);
+       System.out.println(alertMessage);
 		
 	}
 
