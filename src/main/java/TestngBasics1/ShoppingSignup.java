@@ -4,6 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 //import org.openqa.selenium.Alert;
 //import org.openqa.selenium.Alert;
+//import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -14,9 +15,6 @@ import org.testng.annotations.Test;
 public class ShoppingSignup {
 
 	WebDriver driver;
-	
-	//String itemName;
-	
 	
 	@Test(priority=1)
 	
@@ -47,12 +45,14 @@ System.setProperty("webdriver.chrome.driver","C:\\Users\\bhavani.kore\\Drivers\\
 
 	}
 */
-		//login
+	
+	
+	//login
 		
 	@Test(priority=2)
-		public void login() {
-			
 		
+	public void login() {
+			
 			
 		driver.findElement(By.xpath("//a[@id='login2']")).click();
 		
@@ -68,38 +68,32 @@ System.setProperty("webdriver.chrome.driver","C:\\Users\\bhavani.kore\\Drivers\\
 	}
 		@Test(priority=4)
 		
-		public void addToCart() {
+		public void addToCart() 
+		
+		{
 			
-	//String itemName=driver.findElement(By.linkText("Samsung galaxy s6")).getText();
-			
-	driver.navigate().refresh();
+	 driver.navigate().refresh();
 	
-	driver.findElement(By.xpath("//a[contains(text(),'Nokia lumia 1520')]")).click();
+	 driver.findElement(By.xpath("//a[contains(text(),'Nokia lumia 1520')]")).click();
 	
-	driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	 driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	
 	driver.findElement(By.xpath("//a[contains(text(),'Add to cart')]")).click();
 	
-	/*Alert alert1=driver.switchTo().alert();
-	
-	String alertmsg1=driver.switchTo().alert().getText();
-	
-	System.out.println(alertmsg1);*/
-	
 	WebDriverWait wait = new WebDriverWait(driver,2);
 	
-	wait.until(ExpectedConditions.visibilityOfElementLocated
-			(By.xpath("//a[contains(text(),'Cart')]"))).click();
+	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[contains(text(),'Cart')]"))).click();
 	
 	
 			
 		}
-@Test(priority=5)
-		public void placeOrder() {
+		
+		
+      @Test(priority=5)
+		
+      public void placeOrder() throws InterruptedException {
 			
-	//WebDriverWait wait = new WebDriverWait(driver, 5);
-	//wait.until(ExpectedConditions.visibilityOf(element));
-			
+    	  driver.navigate().refresh();
 			driver.findElement(By.cssSelector("body:nth-child(2) div:nth-child(7) div.row div.col-lg-1 > button.btn.btn-success:nth-child(3)")).click();
 			
 			driver.findElement(By.id("name")).sendKeys("Bhavani");
@@ -114,24 +108,32 @@ System.setProperty("webdriver.chrome.driver","C:\\Users\\bhavani.kore\\Drivers\\
 			
 			driver.findElement(By.id("year")).sendKeys("2026");
 			
-			driver.findElement(By.xpath("//button[contains(text(),'Purchase')]")).click();
+			//driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			
+			WebDriverWait wait = new WebDriverWait(driver,2);
+			
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[contains(text(),'Purchase')]"))).click();
+			
+			Thread.sleep(2000);
+			//driver.findElement(By.xpath("//button[contains(text(),'Purchase')]")).click();
 			
           //Alert alert1=driver.switchTo().alert();
 			
-			//String alertmsg1=driver.switchTo().alert().getText();
+		//	String alertmsg1=driver.switchTo().alert().getText();
 			
-			//System.out.println(alertmsg1);
+		//System.out.println(alertmsg1);
 			
 			
 			
 		}
      
-@Test(priority=3)
+    @Test(priority=3)
 		
 		public void contactUs() {
 			
 	driver.navigate().refresh();
-			driver.findElement(By.xpath("//a[contains(text(),'Contact')]")).click();
+			
+	driver.findElement(By.xpath("//a[contains(text(),'Contact')]")).click();
 			 
 			 driver.findElement(By.id("recipient-email")).sendKeys("k.bhavani6@gmail.com");
 			 
@@ -153,13 +155,21 @@ System.setProperty("webdriver.chrome.driver","C:\\Users\\bhavani.kore\\Drivers\\
 			
 			//Alert alert=driver.switchTo().alert();
 			
+    }
 			
+			@Test(priority=6) 
+			
+			public void closeBrowser()
+			{
+				
+				driver.close();
+			}
 			
 			
 		}
 		
      
-}
+
 
         
         
