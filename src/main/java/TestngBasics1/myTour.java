@@ -6,12 +6,14 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
 
 public class myTour {
 
 		static WebDriver driver;
-		
+		@Test(priority=1)
 		public void launchBrowser() {
 			
 			System.setProperty("webdriver.chrome.driver","C:\\Users\\bhavani.kore\\Drivers\\chromedriver.exe");
@@ -24,6 +26,8 @@ public class myTour {
 			
 		}
 
+		@Test(priority=2)
+		
 		public void login1() throws InterruptedException
 		{
 		driver.findElement(By.xpath("//span[@class='user-login ixi-icon-user']")).click();
@@ -61,27 +65,43 @@ driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		   //switch to the parent window
 		   driver.switchTo().window(parent);
 	}
+		      
+		   
 		   
 		   }
+		   
+		}
+		@Test(priority=3)
+		public void booking() {
+			
+			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			//driver.findElement(By.xpath("//input[@name='mobile']")).sendKeys("7702101526");
+			
+			//driver.findElement(By.xpath("//div[@class='continue-cta']")).click();
+			
+			WebElement from=driver.findElement(By.xpath("//input[@autocomplete='new-password']"));
+			
+			from.click();
+			
+			//driver.findElement(By.xpath("//a[contains(text(),'Arabic')]")).click();
+			
 
-		}
-		
-		public void booking()
-		{
-			driver.findElement(By.linkText("buses")).click();
 			
 		}
+		}
+		   
+		   
 		
-		public static void main(String[] args) throws InterruptedException {
-			
-			myTour m1= new myTour();
-			
-			m1.launchBrowser();
-			
-			m1.login1();
-			m1.booking();
-		}			
-}
+
+		
+		
+
+		
+		
+		
+		
+		
+
 
 
 

@@ -1,7 +1,7 @@
 package TestngBasics1;
 
 import java.util.Iterator;
-import java.util.List;
+//import java.util.List;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
@@ -33,14 +33,15 @@ public class HandlingSelect {
 		}
 		
 		@Test(priority=2)
+		
 		public void register() {
 			
-			
-			
+				
 			//firstName
 			
 			
 			driver.findElement(By.xpath("//input[@placeholder='First Name']")).sendKeys("Kore");
+			
 			//lastName
 			
 			driver.findElement(By.xpath("//input[@placeholder='Last Name']")).sendKeys("bhavani");
@@ -80,22 +81,28 @@ driver.findElement(By.id("checkbox2")).click();  //checkbox
 			//languages
 			 
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-			  driver.findElement(By.id("msdd")).click();
+			  
+		WebElement language=driver.findElement(By.id("msdd"));
+		
+		language.click();
+		
+		driver.findElement(By.xpath("//a[contains(text(),'Arabic')]")).click();
+		driver.findElement(By.xpath("//a[contains(text(),'English')]")).click();
 			
-	 List<WebElement> list=driver.findElements(By.xpath("//ul[@class='ui-autocomplete ui-front ui-menu ui-widget ui-widget-content ui-corner-all']//li//a"));
+	/* List<WebElement> list=driver.findElements(By.xpath("//ul[@class='ui-autocomplete ui-front ui-menu ui-widget ui-widget-content ui-corner-all']//li//a"));
 			 
 			for(int i=0;i<=list.size();i++) {
 				
-				System.out.println(list.get(i).getText());
+				//System.out.println(list.get(i).getText());
 				
 				if(list.get(i).getText().contains("English")) {
 					
 					list.get(i).click();
 					
 					
-					break;
-				}
-			}
+					break;*/
+				
+			
 			
 			
 			
@@ -147,10 +154,10 @@ driver.findElement(By.id("checkbox2")).click();  //checkbox
 			
 			driver.findElement(By.xpath("//button[@id='submitbtn']")).click();
 			
-
 	}
+	
 		@Test(priority=4)
-	public void handlingWindows() {
+	public void handlingWindows() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		
@@ -172,18 +179,18 @@ driver.findElement(By.id("checkbox2")).click();  //checkbox
 		
 		
 		driver.switchTo().window(cWindow);
-		
+		Thread.sleep(2000);
 		System.out.println("Child window tilt"+driver.getTitle());
 		
 		driver.close();
 		
 		
 		
-		
+		}	
 		
 	}
 	
-	}
+	
 	
 		
 
