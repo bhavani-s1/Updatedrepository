@@ -15,7 +15,7 @@ import org.openqa.selenium.support.ui.Select;
 //import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 
-public class HandlingSelect {
+public class AutomatingRegistrationForm {
 
 
 		WebDriver driver;
