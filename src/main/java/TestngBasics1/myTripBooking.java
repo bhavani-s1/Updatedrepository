@@ -5,15 +5,19 @@ import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class myTripBooking {
 
 	
 		WebDriver driver;
-		@Test(priority=1)
+		@BeforeTest
 		
 		public void launchBrowser() {
 			
@@ -24,24 +28,34 @@ public class myTripBooking {
 			driver.get("https://www.goibibo.com/");
 			
 			driver.manage().window().maximize();
-			
+			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		}
 		
 @Test(priority=2)
 		
 		public void login1() throws InterruptedException
 		{
-		driver.findElement(By.xpath("//a[@id='get_sign_in']")).click();
+	
+	driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	
+		WebElement signin=driver.findElement(By.xpath("//a[@id='get_sign_in']"));
+		
+		signin.click();
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
 		//facebook login
 		
 		driver.switchTo().frame("authiframe");
-		Thread.sleep(2000);
-		driver.findElement(By.xpath("//button[@id=\'authFBSignInBtn\']")).click();
-		Thread.sleep(2000);
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		
+		WebElement facebook =driver.findElement(By.xpath("//button[@id='authFBSignInBtn']"));
+
+		facebook.click();
+		
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		
 		String parent=driver.getWindowHandle();
+		
 		Set<String>s=driver.getWindowHandles();
 		
 		// Now iterate using Iterator
@@ -52,25 +66,87 @@ public class myTripBooking {
 		if(!parent.equals(child_window))
 		{
 		driver.switchTo().window(child_window);
-		driver.findElement(By.id("email")).sendKeys("7702101526");
-		driver.findElement(By.id("pass")).sendKeys("Manvitreddy@321");
-		driver.findElement(By.name("login")).click();
-		Thread.sleep(5000);
-		//WebElement text = driver.findElement(By.id("error_box"));
-		//System.out.println(text.getText());
+		System.out.println(driver.switchTo().window(child_window).getTitle());
+		
+		driver.findElement(By.xpath("//input[@id='email']")).sendKeys("7702101526");
+
+		driver.findElement(By.xpath("//input[@id='pass']")).sendKeys("Manvitreddy@321");
+		driver.findElement(By.xpath("//input[@name='login']")).click();
+		//driver.close();
+		
 		}
 		}
+		driver.switchTo().window(parent);
+
+		}
 		
-		driver.findElement(By.id("authMobile")).sendKeys("7702101526");
+		@Test(priority=1)
 		
-		driver.findElement(By.id("mobileSubmitBtn")).click();
-		driver.getWindowHandle();
+         public void booking() throws InterruptedException {
+			
+        	 driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        	
+        	  driver.findElement(By.id("roundTrip")).click();
+        	 
+        	 WebElement from=driver.findElement(By.xpath("//input[@placeholder='From']"));
+        	 
+        	 from.sendKeys("hyderabad");
+        	 
+        	 from.sendKeys(Keys.ARROW_DOWN);
+        	 
+        	 from.sendKeys(Keys.ENTER);
+        	 
+        	 Thread.sleep(2000);
+        	 
+        	 WebElement to= driver.findElement(By.xpath("//input[@id='gosuggest_inputDest']"));
+        	 
+        	 to.sendKeys("Bengaluru");
+        	 
+             to.sendKeys(Keys.ARROW_DOWN);
+        	 
+        	 to.sendKeys(Keys.ENTER);
+        	 
+        	 Thread.sleep(2000);
+        //starting date
+        	 
+        //driver.findElement(By.xpath("//input[@id='departureCalendar']")).click();
+        	 driver.findElement(By.cssSelector
+        			 ("div.DayPicker-Day.DayPicker-Day--today.DayPicker-Day--selected")).click();
+        	 
+        Thread.sleep(2000);
+        
+        //.sendKeys("20200917");
+        
+        //ending date
+        
+        driver.findElement(By.xpath("//input[@id='returnCalendar']")).click();
+        //sendKeys("09212020");
+        
+        //traveller
+        
+        driver.findElement(By.xpath("//div[@id='pax_link_common']")).click();
+        
+        //adults
+        
+        driver.findElement(By.xpath("//button[@id='adultPaxPlus']")).click();
+        
+        //class
+        
+        WebElement travel=driver.findElement(By.xpath("//select[@id='gi_class']"));
+        
+        Select dw= new Select(travel);
+        
+        dw.deselectByValue("F");
+      //search   
+      driver.findElement(By.xpath("//button[@value='Search']")).click();
+      
+    
+         	 	 
+		}
 		
-		driver.findElement(By.id("roundTrip")).click();
 		
-		//Booking bus
-		
-		
-		
-		}	
-}
+
+
+	
+}	
+
