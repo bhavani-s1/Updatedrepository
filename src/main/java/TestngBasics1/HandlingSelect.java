@@ -101,11 +101,7 @@ driver.findElement(By.id("checkbox2")).click();  //checkbox
 					
 					
 					break;*/
-				
-			
-			
-			
-			
+						
 		Select dropdown = new Select(driver.findElement(By.id("Skills")));  //select dropdown
 		
 		dropdown.selectByVisibleText("C++");  

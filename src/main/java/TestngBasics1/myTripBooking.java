@@ -107,21 +107,23 @@ public class myTripBooking {
         	 to.sendKeys(Keys.ENTER);
         	 
         	 Thread.sleep(2000);
-        //starting date
-        	 
-        //driver.findElement(By.xpath("//input[@id='departureCalendar']")).click();
-        	 driver.findElement(By.cssSelector
-        			 ("div.DayPicker-Day.DayPicker-Day--today.DayPicker-Day--selected")).click();
-        	 
-        Thread.sleep(2000);
+       
+        driver.findElement(By.xpath("//input[@id='departureCalendar']")).click();
         
-        //.sendKeys("20200917");
+     //driver.findElement(By.xpath("div[@class='DayPicker DayPicker--en']//div[2]//div[@id='fare_20200918']")).click();
         
-        //ending date
+  WebElement deptDate=driver.findElement(By.xpath("//div[@class='DayPicker-Day'][contains(@aria-label,'Sep 19 2020')]"));
+  
+  deptDate.click();
+  
+  Thread.sleep(2000);
         
         driver.findElement(By.xpath("//input[@id='returnCalendar']")).click();
-        //sendKeys("09212020");
         
+      Thread.sleep(2000);
+        driver.findElement(By.xpath("//div[@class='DayPicker-Day'][contains(@aria-label,'Sep 21 2020')]")).click();
+        
+        Thread.sleep(2000);
         //traveller
         
         driver.findElement(By.xpath("//div[@id='pax_link_common']")).click();
@@ -140,13 +142,8 @@ public class myTripBooking {
       //search   
       driver.findElement(By.xpath("//button[@value='Search']")).click();
       
-    
          	 	 
 		}
-		
-		
-
-
 	
 }	
 

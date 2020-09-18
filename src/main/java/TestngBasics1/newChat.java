@@ -28,6 +28,10 @@ public class newChat {
 		
 		driver.get("https://www.phptravels.com/");
 		
+		//scrolling down the page
+		
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy(0,350)", "");
 		driver.manage().window().maximize();
 		
 	}
@@ -57,9 +61,11 @@ public class newChat {
 		WebElement whatsapp=driver.findElement(By.xpath("(//input[@class='lc-1gz7fd7 e1xplv9i0'])[2]"));
 		whatsapp.sendKeys("7702101526");
 		
-		driver.findElement(By.xpath("//input[@id='email']")).sendKeys("k.bhavani6@gmail.com");
 		
 		Thread.sleep(2000);
+		
+		driver.findElement(By.xpath("//input[@id='email']")).sendKeys("k.bhavani6@gmail.com");
+		
        
 		//WebElement choice=driver.findElement(By.xpath("//input[@class='//input[@class='lc-5mlnfz e81sjne0']"));
 		
