@@ -88,6 +88,7 @@ System.setProperty("webdriver.chrome.driver","C:\\Users\\bhavani.kore\\Drivers\\
 		
       public void placeOrder() throws InterruptedException {
 			
+    	  driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     	  driver.findElement(By.cssSelector("body:nth-child(2) div:nth-child(7) div.row div.col-lg-1 > button.btn.btn-success:nth-child(3)")).click();
     	  driver.findElement(By.id("name")).sendKeys("Bhavani");
     	  driver.findElement(By.id("country")).sendKeys("India");
@@ -96,6 +97,8 @@ System.setProperty("webdriver.chrome.driver","C:\\Users\\bhavani.kore\\Drivers\\
     	  driver.findElement(By.id("month")).sendKeys("September");
     	  driver.findElement(By.id("year")).sendKeys("2020");
     	  driver.findElement(By.xpath("//button[contains(text(),'Purchase')]")).click();
+    	  
+    	  Thread.sleep(2000);
 
 			
 			

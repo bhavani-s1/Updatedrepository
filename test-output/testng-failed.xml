@@ -3,11 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.testngfirstpackage.DemoBlazePlaceOrderTest">
+      <class name="TestngBasics1.TestProperties">
         <methods>
-          <include name="placeOrder"/>
+          <include name="contactUs"/>
         </methods>
-      </class> <!-- com.testngfirstpackage.DemoBlazePlaceOrderTest -->
+      </class> <!-- TestngBasics1.TestProperties -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
