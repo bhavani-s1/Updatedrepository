@@ -41,6 +41,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 			
 	driver.get(prop.getProperty("url"));
 			
+	//helperTest test1= new helperTest();
 			driver.manage().window().maximize();
 		}
 		//signup
@@ -150,8 +151,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 	    	//driver.findElement(By.xpath("//a[contains(text(),'Contact')]")).click();
 	    	 driver.findElement(By.xpath(prop.getProperty("contactlinkclick"))).click();
 	    	
-	    	driver.findElement(By.id(prop.getProperty("contactemail"))).sendKeys(prop.getProperty("emailid"));
-	    	driver.findElement(By.xpath("//input[@id='recipient-name']")).sendKeys(prop.getProperty("contactusername"));
+	    	driver.findElement(By.id("recipient-email")).sendKeys("k.bhavani6@gmail.com");
+	    	driver.findElement(By.xpath("//input[@id='recipient-name']")).sendKeys("Bhavani");
 	    	driver.findElement(By.xpath("//textarea[@id='message-text']")).sendKeys("message");
 	    	driver.findElement(By.xpath("//button[contains(text(),'Send message')]")).click();
 	    	WebDriverWait wait = new WebDriverWait(driver,2);
