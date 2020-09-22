@@ -29,8 +29,9 @@ System.setProperty("webdriver.chrome.driver","C:\\Users\\bhavani.kore\\Drivers\\
 		
 		driver.manage().window().maximize();
 	}
-	/*	//signup
+	//signup
 		
+	public void signup() {
 		driver.findElement(By.id("signin2")).click();
 		
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -44,11 +45,11 @@ System.setProperty("webdriver.chrome.driver","C:\\Users\\bhavani.kore\\Drivers\\
 		//driver.findElement(By.classname("Sign up")).click();
 
 	}
-*/
+
 	
 	
 	//login
-		
+	
 	@Test(priority=2)
 		
 	public void login() throws InterruptedException {
@@ -101,13 +102,15 @@ System.setProperty("webdriver.chrome.driver","C:\\Users\\bhavani.kore\\Drivers\\
     	  Thread.sleep(2000);
 
 			
-			
-		}
+      }
+		
      
     @Test(priority=3)
 		
-		public void contactUs() {
-			
+		
+			public void contactus() {
+    	
+    
     	driver.navigate().refresh();
     	driver.findElement(By.xpath("//a[contains(text(),'Contact')]")).click();
     	driver.findElement(By.id("recipient-email")).sendKeys("k.bhavani6@gmail.com");
@@ -121,8 +124,8 @@ System.setProperty("webdriver.chrome.driver","C:\\Users\\bhavani.kore\\Drivers\\
     	driver.switchTo().alert().accept();
 
 			//Alert alert=driver.switchTo().alert();
-			
-    }
+    }		
+   
 			
 			@Test(priority=6) 
 			

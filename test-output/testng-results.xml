@@ -1,86 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="4" passed="3">
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="14292" started-at="2020-09-21T14:00:07 IST" finished-at="2020-09-21T14:00:22 IST">
+  <suite name="Default suite" duration-ms="17155" started-at="2020-09-22T11:03:54 IST" finished-at="2020-09-22T11:04:11 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="14292" started-at="2020-09-21T14:00:07 IST" finished-at="2020-09-21T14:00:22 IST">
-      <class name="TestngBasics1.TestProperties">
-        <test-method status="PASS" signature="launchBrowser()[pri:1, instance:TestngBasics1.TestProperties@578486a3]" name="launchBrowser" duration-ms="10836" started-at="2020-09-21T14:00:07 IST" finished-at="2020-09-21T14:00:18 IST">
+    <test name="Default test" duration-ms="17155" started-at="2020-09-22T11:03:54 IST" finished-at="2020-09-22T11:04:11 IST">
+      <class name="TestngBasics1.ShoppingSignup">
+        <test-method status="PASS" signature="launchBrowser()[pri:1, instance:TestngBasics1.ShoppingSignup@578486a3]" name="launchBrowser" duration-ms="12249" started-at="2020-09-22T11:03:54 IST" finished-at="2020-09-22T11:04:06 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method status="PASS" signature="login()[pri:3, instance:TestngBasics1.TestProperties@578486a3]" name="login" duration-ms="2758" started-at="2020-09-21T14:00:18 IST" finished-at="2020-09-21T14:00:21 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- login -->
-        <test-method status="FAIL" signature="contactUs()[pri:4, instance:TestngBasics1.TestProperties@578486a3]" name="contactUs" duration-ms="156" started-at="2020-09-21T14:00:21 IST" finished-at="2020-09-21T14:00:21 IST">
-          <exception class="org.openqa.selenium.UnhandledAlertException">
-            <message>
-              <![CDATA[unexpected alert open: {Alert text : Please fill out Username and Password.}
-  (Session info: chrome=85.0.4183.102): Please fill out Username and Password.
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'ATMECSINLT-404', ip: '192.168.0.103', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_241'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.102, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\Users\BHAVAN~1.KOR\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:59432}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: e7b8e8a17d73927521ca3fec79c9d211]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : Please fill out Username and Password.}
-  (Session info: chrome=85.0.4183.102): Please fill out Username and Password.
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'ATMECSINLT-404', ip: '192.168.0.103', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_241'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.102, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\Users\BHAVAN~1.KOR\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:59432}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: e7b8e8a17d73927521ca3fec79c9d211
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:120)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
-at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.refresh(RemoteWebDriver.java:865)
-at TestngBasics1.TestProperties.contactUs(TestProperties.java:149)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:821)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.util.ArrayList.forEach(Unknown Source)
-at org.testng.TestRunner.privateRun(TestRunner.java:767)
-at org.testng.TestRunner.run(TestRunner.java:588)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1214)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1136)
-at org.testng.TestNG.runSuites(TestNG.java:1066)
-at org.testng.TestNG.run(TestNG.java:1034)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.UnhandledAlertException -->
+        <test-method status="PASS" signature="contactUs()[pri:3, instance:TestngBasics1.ShoppingSignup@578486a3]" name="contactUs" duration-ms="1967" started-at="2020-09-22T11:04:07 IST" finished-at="2020-09-22T11:04:08 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- contactUs -->
-        <test-method status="PASS" signature="closeBrowser()[pri:6, instance:TestngBasics1.TestProperties@578486a3]" name="closeBrowser" duration-ms="404" started-at="2020-09-21T14:00:21 IST" finished-at="2020-09-21T14:00:22 IST">
+        <test-method status="PASS" signature="closeBrowser()[pri:6, instance:TestngBasics1.ShoppingSignup@578486a3]" name="closeBrowser" duration-ms="2784" started-at="2020-09-22T11:04:09 IST" finished-at="2020-09-22T11:04:11 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-      </class> <!-- TestngBasics1.TestProperties -->
+      </class> <!-- TestngBasics1.ShoppingSignup -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
