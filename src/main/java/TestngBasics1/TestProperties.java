@@ -34,7 +34,7 @@ import org.testng.annotations.Test;
 			
 	driver.get(prop.getProperty("url"));
 			
-	//helperTest test1= new helperTest();
+	
 			driver.manage().window().maximize();
 		}
 		//signup
@@ -81,6 +81,7 @@ import org.testng.annotations.Test;
 			//driver.findElement(By.xpath("//a[@id='login2']")).click();
 			
 			driver.findElement(By.xpath(prop.getProperty("Loginbutton"))).click();
+			
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			
 			//driver.findElement(By.id("loginusername")).sendKeys(prop.getProperty("emailid"));

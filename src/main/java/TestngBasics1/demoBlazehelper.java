@@ -14,6 +14,7 @@ import org.testng.annotations.Test;
 
 		WebDriver driver;
 		helperTest h1= new helperTest();
+		
 		@Test(priority=1)
 		
 			public void launchBrowser() {
@@ -27,8 +28,21 @@ import org.testng.annotations.Test;
 			
 			driver.manage().window().maximize();
 		}
-		//signup
+		
+		
+		 //using helper class
+	      
+	    @Test(priority=2)
 			
+			public void contactUs() throws IOException {
+	    	
+	    h1.contactUs(driver);
+	    	
+	    }
+		
+		
+		//signup
+			@Test(priority=3)
 		public void signup() {
 			driver.findElement(By.id("signin2")).click();
 			
@@ -48,7 +62,7 @@ import org.testng.annotations.Test;
 		
 		//login
 			
-		@Test(priority=2)
+		@Test(priority=4)
 			
 		public void login() throws InterruptedException {
 				
@@ -65,7 +79,7 @@ import org.testng.annotations.Test;
 			
 			Thread.sleep(2000);
 		}
-			@Test(priority=4)
+			@Test(priority=5)
 			
 			public void addToCart() 
 			
@@ -83,7 +97,7 @@ import org.testng.annotations.Test;
 			}
 			
 			
-	      @Test(priority=5)
+	      @Test(priority=6)
 			
 	      public void placeOrder() throws InterruptedException {
 				
@@ -102,14 +116,8 @@ import org.testng.annotations.Test;
 				
 				
 			}
+	    
 	     
-	    @Test(priority=3)
-			
-			public void contactUs() throws IOException {
-	    	
-	    h1.contactUs(driver);
-	    	
-	    }
 				
 	    	/*driver.navigate().refresh();
 	    	driver.findElement(By.xpath("//a[contains(text(),'Contact')]")).click();
@@ -127,7 +135,7 @@ import org.testng.annotations.Test;
 				
 	    }*/
 				
-				@Test(priority=6) 
+				@Test(priority=7) 
 				
 				public void closeBrowser()
 				{
